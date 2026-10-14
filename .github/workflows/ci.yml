@@ -1,0 +1,50 @@
+name: CI
+
+# Roda o build a cada envio para a main e a cada pull request
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Lint, testes e build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar o Nox
+        run: pip install nox
+
+      - name: "Task 1: Lint"
+        run: nox -s lint
+
+      - name: "Task 2: Testes com cobertura"
+        run: nox -s testes
+
+      - name: "Task 3: Build do pacote"
+        run: nox -s build
+
+      - name: Guardar o pacote gerado
+        uses: actions/upload-artifact@v4
+        with:
+          name: pacote-votoclaro
+          path: dist/
+
+      - name: Guardar os relatorios de testes
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorios-testes
+          path: |
+            relatorio-testes.xml
+            coverage.xml
