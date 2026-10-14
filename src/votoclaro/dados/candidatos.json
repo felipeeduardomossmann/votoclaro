@@ -1,0 +1,70 @@
+{
+  "aviso": "Dados ficticios usados apenas para desenvolvimento e testes.",
+  "candidatos": [
+    {
+      "id": 1,
+      "nome": "Ana Ribeiro",
+      "partido": "PARTIDO A",
+      "cargo": "prefeito",
+      "cidade": "Vale Verde",
+      "uf": "RS",
+      "situacao": "deferida",
+      "bens_declarados": 350000.0,
+      "propostas": {
+        "saude": "Abrir duas novas unidades basicas de saude",
+        "educacao": "Ampliar vagas em creches",
+        "seguranca": "Instalar cameras nas principais vias"
+      },
+      "posicoes": {"p1": 1, "p2": 1, "p3": -1}
+    },
+    {
+      "id": 2,
+      "nome": "Bruno Carvalho",
+      "partido": "PARTIDO B",
+      "cargo": "prefeito",
+      "cidade": "Vale Verde",
+      "uf": "RS",
+      "situacao": "deferida",
+      "bens_declarados": 820000.0,
+      "propostas": {
+        "saude": "Firmar parcerias com hospitais privados",
+        "educacao": "Reformar todas as escolas municipais",
+        "seguranca": "Criar a guarda municipal"
+      },
+      "posicoes": {"p1": -1, "p2": 1, "p3": 1}
+    },
+    {
+      "id": 3,
+      "nome": "Carla Souza",
+      "partido": "PARTIDO C",
+      "cargo": "vereador",
+      "cidade": "Vale Verde",
+      "uf": "RS",
+      "situacao": "deferida",
+      "bens_declarados": 120000.0,
+      "propostas": {
+        "educacao": "Propor merenda com alimentos da agricultura local"
+      },
+      "posicoes": {"p1": 1, "p2": 0, "p3": -1}
+    },
+    {
+      "id": 4,
+      "nome": "Diego Martins",
+      "partido": "PARTIDO A",
+      "cargo": "prefeito",
+      "cidade": "Serra Alta",
+      "uf": "RS",
+      "situacao": "indeferida",
+      "bens_declarados": 95000.0,
+      "propostas": {
+        "saude": "Contratar mais medicos de familia"
+      },
+      "posicoes": {"p1": 1, "p2": -1, "p3": 0}
+    }
+  ],
+  "perguntas": [
+    {"id": "p1", "tema": "saude", "texto": "A prefeitura deve priorizar a abertura de novos postos de saude?"},
+    {"id": "p2", "tema": "educacao", "texto": "A reforma das escolas deve vir antes da construcao de novas?"},
+    {"id": "p3", "tema": "seguranca", "texto": "O municipio deve criar ou ampliar a guarda municipal?"}
+  ]
+}
