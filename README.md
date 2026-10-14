@@ -1,6 +1,6 @@
 # VotoClaro
 
-![CI](https://github.com/SEU_USUARIO/votoclaro/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/felipeeduardomossmann/votoclaro/actions/workflows/ci.yml/badge.svg)
 
 API do VotoClaro, um app para o eleitor se informar antes de votar usando apenas dados oficiais do TSE e de forma neutra.
 
